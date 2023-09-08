@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1da1f2;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tweet {
+    border: 1px solid #e1e8ed;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.tweet h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.tweet p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.comment {
+    border-top: 1px solid #e1e8ed;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.comment input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #e1e8ed;
+    border-radius: 5px;
+}
+
+.comment button {
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}

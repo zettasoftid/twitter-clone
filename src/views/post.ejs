@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter-like Post and Comment Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Tambahkan stylesheet kustom Anda jika diperlukan -->
+    <style>
+        /* Tambahkan gaya tambahan di sini */
+        body {
+            background-color: #f5f8fa; /* Warna latar belakang mirip dengan Twitter */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar - Mirip dengan Navbar Twitter -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Fake Twitter</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Tombol untuk Menambahkan Komentar -->
+    <div class="container mt-3">
+        <form>
+            <div class="form-group">
+                <label for="comment">Tambahkan Komentar:</label>
+                <textarea class="form-control" id="comment" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kirim</button>
+        </form>
+    </div>
+
+    <!-- Container untuk Post -->
+    <div class="container mt-4">
+        <!-- Post - Mirip dengan Twitter -->
+        <ul>
+            <% getPosts.forEach((post) => { %>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><%= post.author.username %></h5>
+                    <p class="card-text"><%= post.content %></li></p>
+                </div>
+            </div>
+            <br>
+            <% }); %>
+        </ul>
+
+        <!-- Anda dapat menambahkan lebih banyak komentar di sini sesuai kebutuhan -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+    <!-- <ul>
+        <% getPosts.forEach((post) => { %>
+          <li>ID: <%= post.id %></li>
+          <li>Title: <%= post.title %></li>
+          <li>Content: <%= post.content %></li>
+          <li>Published: <%= post.published %></li>
+          <li>AuthorID: <%= post.authorId %></li>
+        <% }); %>
+    </ul> -->
